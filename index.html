@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Links | SANT-SD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #6c5ce7;
+      --secondary: #a29bfe;
+      --dark: #0f0f1a;
+      --light: #f5f6fa;
+      --accent: #d32da699;
+      --text: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', 'Arial Black', sans-serif;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px;
+    }
+
+    #nebulaCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.7;
+    }
+
+    .container {
+      max-width: 500px;
+      z-index: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 10px rgb(16 155 211 / 29%);
+      margin-bottom: 1rem;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      background-color: rgb(211 16 86 / 22%);
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.7rem 1.3rem;
+      margin-bottom: 0.6rem;
+      border-radius: 25px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgb(211 16 86 / 22%);
+    }
+
+    .link:hover {
+      transform: translateY(-2px);
+      background-color: rgb(211 16 86 / 22%);
+    }
+
+    .link i {
+      font-size: 1.2rem;
+      margin-right: 12px;
+      color: var(--accent);
+    }
+
+    .link-text h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: linear-gradient(45deg, #1877F2, #bd0d0de0);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    .contact-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(24, 119, 242, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: auto;
+      padding: 1rem 0;
+      color: var(--text-secondary);
+    }
+
+    footer span {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .link {
+        padding: 0.6rem 1rem;
+      }
+
+      .profile-img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+<canvas id="nebulaCanvas"></canvas>
+
+<div class="container">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP_U2yYqPPU5SExd4LhltlWKsOEOmY1z-jAah_mB5lzXOcWNQKJzjLQ3MLS4a5HkK9UlPOEucYrsMu2KNzmIy9od35lBZfUh_vJ1GdOHQeYn2iciZoZFl0ybHlYnHEXNbcoez6ddBwffJdJODC6hzqtuqzqQVbSt-3tf21MY1ZFbqJZB7uK1uXEIMkasH-/s1024/photo.png" class="profile-img" alt="Profile Picture" />
+  <div style="margin: 1rem 0">
+    <a href="mailto:info@suadvers.com" class="contact-button">CONNECT NOW</a>
+  </div>
+
+  <div class="links">
+    <a href="https://facebook.com/z.arch.52002" class="link"><i class="fab fa-facebook-f"></i><div class="link-text"><h3>Facebook</h3></div></a>
+    <a href="https://instagram.com/al.junaide" class="link"><i class="fab fa-instagram"></i><div class="link-text"><h3>Instagram</h3></div></a>
+    <a href="https://tiktok.com/junaide.sd" class="link"><i class="fab fa-tiktok"></i><div class="link-text"><h3>TikTok</h3></div></a>
+    <a href="https://reddit.com/u/sant-sd" class="link"><i class="fab fa-reddit"></i><div class="link-text"><h3>Reddit</h3></div></a>
+    <a href="https://github.com/sant-sd" class="link"><i class="fab fa-github"></i><div class="link-text"><h3>GitHub</h3></div></a>
+    <a href="https://twitter.com/hoba_rsf" class="link"><i class="fab fa-twitter"></i><div class="link-text"><h3>Twitter</h3></div></a>
+    <a href="https://www.suadvers.com/" class="link"><i class="fas fa-globe"></i><div class="link-text"><h3>WebSite</h3></div></a>
+  </div>
+</div>
+
+<footer>MADE WITH ❤️ <span>SANT-SD</span></footer>
+
+<script>
+  const canvas = document.getElementById('nebulaCanvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const stars = [];
+  const starCount = 300;
+  const clouds = [];
+  const cloudCount = 10;
+
+  const starColors = ['#5dadec', '#9b59b6', '#e67e22', '#2ecc71', '#ff9ff3', '#f1c40f'];
+  const nebulaColors = ['rgba(91,173,236,0.08)', 'rgba(155,89,182,0.08)', 'rgba(230,126,34,0.08)'];
+
+  for (let i = 0; i < starCount; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.3 + 0.5,
+      color: starColors[Math.floor(Math.random() * starColors.length)],
+      s: Math.random() * 0.2 + 0.05,
+      d: Math.random() * Math.PI * 2
+    });
+  }
+
+  for (let i = 0; i < cloudCount; i++) {
+    clouds.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      w: Math.random() * 100 + 50,
+      h: Math.random() * 40 + 30,
+      color: nebulaColors[Math.floor(Math.random() * nebulaColors.length)],
+      angle: Math.random() * Math.PI * 2,
+      speed: Math.random() * 0.0005 + 0.0002
+    });
+  }
+
+  function animate() {
+    ctx.fillStyle = 'rgba(10, 10, 30, 0.1)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    clouds.forEach(c => {
+      c.angle += c.speed;
+      ctx.save();
+      ctx.translate(c.x, c.y);
+      ctx.rotate(c.angle);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, c.w, c.h, 0, 0, 2 * Math.PI);
+      ctx.fillStyle = c.color;
+      ctx.filter = 'blur(8px)';
+      ctx.fill();
+      ctx.restore();
+    });
+
+    stars.forEach(s => {
+      s.x += Math.cos(s.d) * s.s;
+      s.y += Math.sin(s.d) * s.s;
+      if (s.x < 0) s.x = canvas.width;
+      if (s.x > canvas.width) s.x = 0;
+      if (s.y < 0) s.y = canvas.height;
+      if (s.y > canvas.height) s.y = 0;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, 2 * Math.PI);
+      ctx.fillStyle = s.color;
+      ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+  animate();
+</script>
+</body>
+</html>
